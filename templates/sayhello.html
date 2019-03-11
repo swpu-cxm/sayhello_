@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <link rel="stylesheet" href="../static/sayhello.css">
+</head>
+<body>
+<div class="main">
+    <div class="logo">
+        <span id="h1">Say Hello</span>
+        <span id="h4">to the world</span>
+    </div>
+
+    <div class="input-class">
+        <ul class="input-list">
+            <form action="{{ request.full_path }}" method="post" name="HelloForm">
+                {{ form.csrf_token }}
+                <li><label for="">Name</label></li>
+                {#                <li><input type="text" class="input-name" name="name"></li>#}
+                <li>{{ form.name }}</li>
+                <li>
+                    <lable>Message</lable>
+                </li>
+                {#                <li><textarea name="message" id="message" cols="30" rows="10"></textarea></li>#}
+                <li>{{ form.message }}</li>
+                {#                <li><input type="submit" value="留言" id="submit-button"></li>#}
+                <li>{{ form.submit }}</li>
+            </form>
+        </ul>
+    </div>
+    <div class="message-list">
+        <h2 class="message-count">{{ count }} message</h2>
+        {% for message in messages %}
+            <div class="message">
+                <div class="author">
+                    {{ message.name }}
+                </div>
+
+                <div class="time">
+                    {{ message.timestamp }}
+                </div>
+
+                <div class="info">
+                    {{ message.body }}
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+</body>
+</html>

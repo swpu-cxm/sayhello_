@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    auto: 0;
+}
+
+.main {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.logo {
+    text-align: center;
+}
+
+#h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#h4 {
+    font-size: 20px;
+}
+
+.input-list {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.input-list li {
+    margin-top: 10px;
+}
+
+.input-name {
+    width: 80%;
+    height: 30px;
+}
+
+.input-message {
+    width: 80%;
+    height: 40px;
+}
+
+.message-count {
+    margin-top: 20px;
+    margin-left: 135px;
+}
+
+.message {
+    margin-top: 5px;
+    margin-left: 135px;
+    width: 72%;
+    border: 2px solid black;
+}
+
+.author {
+    padding: 20px;
+    float: left;
+}
+
+.time {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.info {
+    /*float: left;*/
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.message:after {
+    content: '';
+    clear: left;
+    display: block;
+}
+
+#message {
+    width: 80%;
+    height: 80px;
+}
+
+#submit-button {
+    width: 70px;
+    height: 40px;
+}
+
+
+
